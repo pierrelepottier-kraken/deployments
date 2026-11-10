@@ -7,7 +7,7 @@ IMAGE = "ghcr.io/pierrelepottier-kraken/kraken-bootstrap:74613fe8d1736f0dfb7ebba
 
 with DAG(
     dag_id="kraken_bootstrap",
-    schedule="30 7 * * *",
+    schedule="0 6 * * *",
     start_date=datetime(2026, 11, 1),
     catchup=False,
     default_args={"retries": 2, "retry_delay": timedelta(minutes=5)},
